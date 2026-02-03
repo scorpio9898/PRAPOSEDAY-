@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Propose Day ❤️</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .page {
+      text-align: center;
+      animation: fadeIn 1.5s ease;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #c2185b;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 1.3rem;
+      color: #6a1b4d;
+      margin-bottom: 40px;
+    }
+
+    .buttons {
+      position: relative;
+      height: 120px;
+    }
+
+    button {
+      padding: 15px 40px;
+      font-size: 1.3rem;
+      border: none;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: absolute;
+    }
+
+    #yesBtn {
+      background: linear-gradient(135deg, #ff4081, #ff80ab);
+      color: white;
+      box-shadow: 0 10px 20px rgba(255, 64, 129, 0.5);
+      left: 50%;
+      transform: translateX(-120%);
+      animation: pulse 1.5s infinite;
+    }
+
+    #noBtn {
+      background: #bdbdbd;
+      color: #616161;
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+      left: 50%;
+      transform: translateX(20%);
+    }
+
+    #noBtn::after {
+      content: '😔';
+      margin-left: 10px;
+    }
+
+    /* SECOND PAGE */
+    .quote {
+      font-size: 2rem;
+      color: #ad1457;
+      max-width: 700px;
+      line-height: 1.5;
+      animation: glow 2s infinite alternate;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes pulse {
+      0% { transform: translateX(-120%) scale(1); }
+      50% { transform: translateX(-120%) scale(1.1); }
+      100% { transform: translateX(-120%) scale(1); }
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff80ab; }
+      to { text-shadow: 0 0 25px #ff4081; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PAGE 1 -->
+  <div class="page" id="page1">
+    <h1>💖 Happy Propose Day 💖</h1>
+    <p>Will you be mine forever?</p>
+
+    <div class="buttons">
+      <button id="yesBtn">YESSSSSSSSSSSSSSSSS(CLICK THIS THIS IS RIGHT ONE 😘)❤️</button>
+      <button id="noBtn">No(DONT CLICK THIS BUTTON THIS IS VERY BAD BUTTON 😠)</button>
+    </div>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div class="page" id="page2" style="display:none;">
+    <h1>💍 I KNEW YOU WOULD SAY YESS 😘 💍</h1>
+    <p class="quote">
+      "YEAHHHHH I KNEW TUII YESS BOLBI.. I KNEW IT , 
+      I SO SO LOVE YOU MEGHLINA 😘😘😘😘,
+      I AM THE MOST BOU/ GIRLFRIEND PAGLU GUY YOU WILL EVER SE IN THIS WORLD .
+      SO JOKHON ATO TA KORLI TOE AKTA SCREENSHOT
+      TULE AMAI WHATSAPP KORE DAI AS YESS, PLSSSSS.
+      
+      AND ON A SERIOUS NOTE "I WILL ALWAYS LOVE YOU LIKE THE DAY WE FIRST MET . ""
+    </p>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById('noBtn');
+    const yesBtn = document.getElementById('yesBtn');
+    const page1 = document.getElementById('page1');
+    const page2 = document.getElementById('page2');
+
+    noBtn.addEventListener('click', () => {
+      const x = Math.random() * 80;
+      const y = Math.random() * 80;
+      noBtn.style.left = x + '%';
+      noBtn.style.top = y + '%';
+    });
+
+    yesBtn.addEventListener('click', () => {
+      page1.style.display = 'none';
+      page2.style.display = 'block';
+    });
+  </script>
+
+</body>
+</html>
+
